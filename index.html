@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PBYT Store Official Website</title>
-    <!-- Иконка во вкладке браузера -->
     <link rel="icon" type="image/x-icon" href="icon.ico">
     <style>
         body {
@@ -14,20 +13,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            padding: 20px 0;
         }
 
         .card {
             background-color: rgba(22, 27, 34, 0.9);
-            padding: 50px;
+            padding: 40px;
             border-radius: 20px;
             border: 1px solid #30363d;
             text-align: center;
             box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
             max-width: 450px;
-            width: 100%;
+            width: 90%;
             backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-out;
         }
@@ -35,7 +34,7 @@
         .logo {
             width: 80px;
             height: 80px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-radius: 18px;
             border: 2px solid #58a6ff;
             padding: 5px;
@@ -48,46 +47,51 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h1 {
-            color: #ffffff;
-            margin-bottom: 5px;
-            font-size: 28px;
-            text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+        h1 { color: #ffffff; margin: 0; font-size: 28px; text-shadow: 0 0 10px rgba(88, 166, 255, 0.5); }
+        .subtitle { color: #8b949e; margin-bottom: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Новые блоки инфо */
+        .info-section {
+            text-align: left;
+            background: rgba(48, 54, 61, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 3px solid #58a6ff;
         }
 
-        .subtitle {
-            color: #8b949e;
-            margin-bottom: 30px;
-            font-size: 14px;
+        .info-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #58a6ff;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+        }
+
+        .info-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 13px;
+            color: #c9d1d9;
+            line-height: 1.6;
         }
 
         .btn {
             display: block;
             width: 100%;
             padding: 15px 0;
-            margin: 15px 0;
+            margin: 10px 0;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             box-sizing: border-box;
             border: none;
-            cursor: pointer;
         }
 
-        .btn-github {
-            background-color: #21262d;
-            color: #c9d1d9;
-            border: 1px solid #444c56;
-        }
-
-        .btn-github:hover {
-            background-color: #30363d;
-            transform: translateY(-3px);
-        }
+        .btn-github { background-color: #21262d; color: #c9d1d9; border: 1px solid #444c56; }
+        .btn-github:hover { background-color: #30363d; transform: translateY(-2px); }
 
         .btn-download {
             background: linear-gradient(135deg, #238636 0%, #2ea043 100%);
@@ -95,46 +99,48 @@
             box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3);
         }
 
-        .btn-download:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(46, 160, 67, 0.5);
-        }
+        .btn-download:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 25px rgba(46, 160, 67, 0.5); }
 
-        footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #484f58;
-        }
-
-        .status-dot {
-            height: 8px;
-            width: 8px;
-            background-color: #238636;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 5px;
-            box-shadow: 0 0 8px #238636;
-        }
+        footer { margin-top: 25px; font-size: 11px; color: #484f58; }
+        .status-dot { height: 8px; width: 8px; background-color: #238636; border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 8px #238636; }
     </style>
 </head>
 <body>
 
     <div class="card">
         <img src="icon.ico" alt="Logo" class="logo">
-
         <h1>PBYT Store</h1>
-        <div class="subtitle">Official Distribution</div>
+        <div class="subtitle">Official Website</div>
         
-        <p style="font-size: 14px; color: #8b949e; margin-bottom: 20px;">
+        <p style="font-size: 13px; color: #8b949e; margin-bottom: 20px;">
             <span class="status-dot"></span> Server Online v0.0.1
         </p>
 
-        <a href="https://github.com/PlayARZYT/PBYT-Store" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+        <!-- Блок: Что нового -->
+        <div class="info-section" style="border-left-color: #58a6ff;">
+            <div class="info-title">🚀 What's New?</div>
+            <ul class="info-list">
+                <li>Initial release of PBYT Store UI</li>
+                <li>Fixed connection with GitHub API</li>
+                <li>Optimized setup package size</li>
+            </ul>
+        </div>
+
+        <!-- Блок: Системные требования -->
+        <div class="info-section" style="border-left-color: #d29922;">
+            <div class="info-title">💻 System Needs</div>
+            <ul class="info-list">
+                <li>OS: Windows 10/11 (64-bit)</li>
+                <li>RAM: 2GB Minimum</li>
+                <li>Storage: 50MB free space</li>
+            </ul>
+        </div>
+
+        <a href="https://github.com" class="btn btn-github" target="_blank" rel="noopener noreferrer">
             View on GitHub
         </a>
 
-        <!-- Исправленная ссылка с атрибутами для скачивания -->
-        <a href="https://github.com/PlayARZYT/PBYT-Store/releases/download/releases/PBYT_Store_v.0.0.1_Setup.exe" class="btn btn-download" download>
+        <a href="https://github.com/releases/download/releases/PBYT_Store_v.0.0.1_Setup.exe" class="btn btn-download" download>
             Download for Windows
         </a>
 
