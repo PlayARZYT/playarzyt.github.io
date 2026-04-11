@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PBYT Store Official Website</title>
+    <!-- Иконка во вкладке браузера -->
     <link rel="icon" type="image/x-icon" href="icon.ico">
     <style>
         body {
@@ -17,6 +18,7 @@
             margin: 0;
             padding: 20px 0;
         }
+
         .card {
             background-color: rgba(22, 27, 34, 0.9);
             padding: 40px;
@@ -29,6 +31,7 @@
             backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-out;
         }
+
         .logo {
             width: 80px;
             height: 80px;
@@ -39,12 +42,15 @@
             background: #161b22;
             box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         h1 { color: #ffffff; margin: 0; font-size: 28px; text-shadow: 0 0 10px rgba(88, 166, 255, 0.5); }
         .subtitle { color: #8b949e; margin-bottom: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+
         .info-section {
             text-align: left;
             background: rgba(48, 54, 61, 0.3);
@@ -53,8 +59,10 @@
             margin-bottom: 20px;
             border-left: 3px solid #58a6ff;
         }
+
         .info-title { font-size: 13px; font-weight: bold; color: #58a6ff; margin-bottom: 8px; text-transform: uppercase; }
         .info-list { margin: 0; padding-left: 18px; font-size: 13px; color: #c9d1d9; line-height: 1.6; }
+
         .btn {
             display: block;
             width: 100%;
@@ -68,16 +76,20 @@
             box-sizing: border-box;
             border: none;
         }
+
         .btn-github { background-color: #21262d; color: #c9d1d9; border: 1px solid #444c56; }
         .btn-github:hover { background-color: #30363d; transform: translateY(-2px); }
+
         .btn-download {
             background: linear-gradient(135deg, #238636 0%, #2ea043 100%);
             color: white;
             box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3);
         }
         .btn-download:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 25px rgba(46, 160, 67, 0.5); }
+
         .btn-discord { background-color: #5865F2; color: white; margin-top: 15px; }
         .btn-discord:hover { background-color: #4752c4; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4); }
+
         footer { margin-top: 25px; font-size: 11px; color: #484f58; }
         .status-dot { height: 8px; width: 8px; background-color: #238636; border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 8px #238636; }
     </style>
@@ -111,18 +123,18 @@
             </ul>
         </div>
 
-        <!-- 1. Кнопка Гитхаба (PlayARZYT/PBYT-Store) -->
-        <a href="https://github.com" class="btn btn-github" target="_blank" rel="noopener noreferrer">
+        <!-- 1. Кнопка Гитхаба -->
+        <a href="https://github.com/PlayARZYT/PBYT-Store" class="btn btn-github" target="_blank" rel="noopener noreferrer">
             View on GitHub
         </a>
 
-        <!-- 2. Кнопка Скачивания (.exe файл) -->
-        <a href="https://github.com/releases/download/releases/PBYT_Store_v.0.0.1_Setup.exe" class="btn btn-download" download>
+        <!-- 2. Кнопка Скачивания -->
+        <a href="https://github.com/PlayARZYT/PBYT-Store/releases/download/releases/PBYT_Store_v.0.0.1_Setup.exe" class="btn btn-download" download>
             Download for Windows
         </a>
 
-        <!-- 3. Кнопка Дискорда (R9SERUHS) -->
-        <a href="https://discord.gg" class="btn btn-discord" target="_blank" rel="noopener noreferrer">
+        <!-- 3. Кнопка Дискорда -->
+        <a href="https://discord.gg/R9SERUHS" class="btn btn-discord" target="_blank" rel="noopener noreferrer">
             Join Discord Server
         </a>
 
